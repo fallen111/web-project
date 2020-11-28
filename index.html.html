@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="scratch.js"></script>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <h1 style="background: gray; color: white;padding-top: 40px;padding-bottom: 40px;padding-left: 10px">Registration form</h1>
+</head>
+<body>
+<p id="uimessage" style="color:red"></p>
+<form action="a.php" method="post" >
+    <div style="padding-left: 20px"><b>Gender: </b><select name="uigender">
+        <option name="gender"value="-1">-</option>
+        <option name="gender"value="0">female</option>
+        <option name="gender"value="1">male</option>
+        <option name="gender"value="2">other</option>
+    </select>
+    </div>
+    <br><br><br>
+
+   <!-- @media only screen and (max-width: 600px) {
+     input[type="text"] {
+    width: 100%;
+    margin-top: 0;
+    }
+    }-->
+<div style="position: relative;margin-left: auto;padding-left: 20px;">
+    Name:   <input type="text" name="uiname" style="position: absolute; left:250px ";<!--onkeydown="return isvalid(event)"-->
+    <br><br>
+    Family name:    <input type="text" name="uifname" style="position: absolute; left:250px;"<!--onkeydown="return isvalid(event)"-->
+    <br><br>
+    Name and family name in English: <input type="text" name="uienglish" style="position: absolute; left:250px">
+    <br><br>
+    Phone number:*   <input type="text" name="uiphone" required  placeholder="required" style="position: absolute; left:250px">
+    <br><br>
+    Email:*  <input type="text" name="uiemail" required  placeholder="required" style="position: absolute; left:250px">
+    <br><br>
+    ID number:*   <input type="text" name="uiID" pattern="[0-9]{3}-[0-9]{6}-[0-9]{1}" palce placeholder="e.g 012-345678-9" required style="position: absolute; left:250px">
+    <br><br>
+    Password:*   <input type="text" name="uipassword" required placeholder="required" style="position: absolute; left:250px">
+    <br><br>
+    Confirm password:  <input type="text" name="uiconfirm" required  placeholder="required" style="position: absolute; left:250px">
+    <br><br>
+    Address:    <input type="text" name="uiaddress" style="position: absolute; left:250px">
+    <br><br>
+    Birthday:   <input type="text" name="uibirthday" value="0" placeholder="yyyy/mm/dd" style="position: absolute; left:250px">
+    <br><br><br>
+    <b>Marital status:* </b>  <div ><br> <input type="radio" name="uimstatus" value="0" required >single<br><br>
+    <input type="radio" name="uimstatus" value="1" required >married</div>
+
+    <br><br><br>
+    <div ><b>Interests:</b>
+        <br><br>
+        <label><input type="checkbox" name="interest" value="1" />sports</label><br>
+        <label><input type="checkbox" name="interest" value="2" />politics</label><br>
+        <label><input type="checkbox" name="interest" value="3" />art</label><br>
+        <label><input type="checkbox" name="interest" value="4" />music</label><br>
+        <label><input type="checkbox" name="interest" value="5" />health</label><br>
+        <label><input type="checkbox" name="interest" value="6" />food</label><br>
+        <label><input type="checkbox" name="interest" value="7" />games</label><br>
+    </div>
+    <br><br></div>
+    <input type="submit" name="uisubmit" onclick="return formvalidation();" value="submit" style=" position:relative;
+    bottom:15px;color: white;width:100%;font-size: 16px;padding: 15px 32px;display: flex;text-align: center;
+    background-color: #555555;}">
+</form>
+
+
+</body>
+</html>
