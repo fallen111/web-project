@@ -64,5 +64,10 @@ function formvalidation() {
 
 
     
-    document.getElementById("uimessage").innerHTML = emessage;
+    if (errorMessage != "") {
+        document.getElementById("uiMessage").innerHTML = errorMessage;
+        return false;
+    }
+
+    return true;
 }
