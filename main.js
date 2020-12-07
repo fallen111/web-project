@@ -28,25 +28,25 @@ function formvalidation() {
 
     var emessage = "";
 
-    if (name.length > 50 || name.length < 3||name.test(/[\u0750-\u077F]/)==false){
+    if (name.length > 50 || name.length < 3||/[\u0750-\u077F]/.test(name)==false){
         emessage+="invalid name entry.please re enter</br>";}
 
     if (gender==-1){
         emessage+="_please choose gender</br>";}
 
-    if(familyname.length>100||familyname.length<3||familyname .test(/[\u0750-\u077F]/)==false){
+    if(familyname.length>100||familyname.length<3||/[\u0750-\u077F]/.test(familyname)==false){
         emessage+="invalid family name entry.please re enter</br>";}
 
-    if(english.length>150||english.test( /^[a-zA-Z]+$/)==false){
+    if(english.length>150||/^[a-zA-Z]+$/.test(english)==false){
         emessage+="invalid name and family name in english.please re enter</br>";}
 
     if(email=""||(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/).test(email)==false){
         emessage+="invalid email address.please re enter</br>";}
 
-    if(phone=""||phone.startsWith("09")==false||phone.test(/[0-9]/g)==false){
+    if(phone=""||phone.startsWith("09")==false||/[0-9]/g.test(phone)==false){
         emessage+="invalid phone number please reenter</br>";}
 
-    if(ID.length!=10||ID.test(/[0-9]/g)==false){
+    if(ID.length!=10||/[0-9]/g.test(ID)==false){
         emessage+="invalid ID.please re enter</br>";}
 
     if(password=""||password.length>24||password.length<8||
@@ -56,7 +56,7 @@ function formvalidation() {
     if(confirm!=password||confirm=""){
         emessage+="incorrect.please re enter</br>";}
 
-    if(address.length>250||address.test(/[\u0750-\u077F]/)==false){
+    if(address.length>250||/[\u0750-\u077F]/.test(address)==false){
         emessage+="invalid address.must be less than 250 chracters</br>";}
 
     if(birthday=""|| ((13[1-9]{1}[0-9]{1})/(0[1-9]|1[0-2])/(0[1-9]|[12]\d|3[01])).test(birthday)==false){
